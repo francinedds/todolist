@@ -65,7 +65,6 @@ function App() {
     )
   }
 
-
   function handleChangeTodo(event: ChangeEvent<HTMLInputElement>) {
     setNewTodo(event.target.value)
   }
