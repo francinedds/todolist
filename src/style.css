@@ -1,0 +1,17 @@
+@import 'tailwindcss';
+
+* {
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: rgb(101, 151, 151);
+}
+
+.content-box {
+  @apply flex gap-2 my-8 justify-center;
+}
+
+button {
+  @apply rounded-md py-1 px-2 text-white cursor-pointer hover:opacity-80 transition delay-50 ease-in-out;
+}
