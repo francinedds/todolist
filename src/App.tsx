@@ -1,5 +1,5 @@
 import './style.css'
-import { ChangeEvent, useState } from 'react'
+import { ChangeEvent, useRef, useState } from 'react'
 
 import { useAutoAnimate } from '@formkit/auto-animate/react'
 
@@ -19,11 +19,13 @@ function App() {
   const [parent] = useAutoAnimate()
   const [parentEdit] = useAutoAnimate()
 
+  const incrementalId = useRef(0)
+
   function addTodo() {
     setTodos([
       ...todos,
       {
-        id: todos.length,
+        id: incrementalId.current++,
         title: newTodo,
         completed: false,
       },
